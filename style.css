@@ -1,0 +1,157 @@
+@import "../omarchy/current/theme/waybar.css";
+
+* {
+  /* background-color: @background; */
+  background-color: transparent;
+
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: "CaskaydiaMono Nerd Font";
+  font-size: 12px;
+}
+
+.modules-left {
+  margin-left: 8px;
+}
+
+.modules-right {
+  margin-right: 8px;
+}
+
+/* workspaces module styles */
+
+#workspaces button {
+  border-bottom: 3px solid white;
+  opacity: 0.3;
+  padding: 0 6px;
+  margin: 0 1.5px;
+  min-width: 40px;
+  border-radius: 2px;
+}
+
+#workspaces button.active {
+  opacity: 1;
+  margin-bottom: 2px;
+  border-bottom: 4px solid white;
+  min-width: 120px;
+  animation: slideIn 0.4s;
+}
+
+#workspaces button:hover {
+  opacity: 1;
+}
+
+@keyframes slideIn {
+  from {
+    min-width: 40px;
+  }
+  to {
+    min-width: 120px;
+  }
+}
+
+/* ----------------------------------- */
+
+/* Sound Module Styles */
+
+#audio-expander {
+  background-color: #d3d2d2;
+  border-radius: 30px;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-top: 5px;
+}
+
+#pulseaudio {
+  min-width: 60px;
+  color: #221e1e;
+  font-size: 12px;
+  font-weight: bolder;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+#pulseaudio-slider slider {
+  min-width: 0px;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+  min-height: 6px;
+  min-width: 70px;
+  border-radius: 999px;
+  background: #a19f9f;
+}
+#pulseaudio-slider highlight {
+  min-width: 0px;
+  min-height: 0px;
+  border-radius: 999px;
+  background: #221e1e;
+}
+
+/* --------------------------------------- */
+
+/* Mutual Style  */
+
+#memory,
+#cpu,
+#bluetooth,
+#network,
+#clock {
+  background-color: #d3d2d2;
+  border-radius: 30px;
+  color: #221e1e;
+  font-size: 12px;
+  font-weight: bolder;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  padding-left: 7px;
+  padding-right: 7px;
+  margin-top: 5px;
+}
+
+/* --------------------- */
+
+/* Others  */
+
+#bluetooth.disabled {
+  background-color: #1f1e1e;
+  color: #fff;
+  border: 0.5px solid #fff;
+}
+
+#custom-expand-icon {
+  margin-right: 20px;
+}
+
+tooltip {
+  padding: 2px;
+}
+
+#custom-update {
+  font-size: 10px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#custom-screenrecording-indicator {
+  min-width: 12px;
+  margin-left: 8.75px;
+  font-size: 10px;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #a55555;
+}
+
+#custom-omarchy,
+#custom-screenrecording-indicator,
+#custom-update {
+  min-width: 12px;
+}
+
+/* -------------------------------- */
